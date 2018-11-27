@@ -1,0 +1,10 @@
+<% @articles.each do |article| %>
+  <article>
+    <h2>
+      <%= link_to article.title, article_path(article.id) %>
+    </h2>
+    <p>
+      <%= article.content.first(70) + "[...]" %>
+    </p>
+    </article>
+<% end %>
